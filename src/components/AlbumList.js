@@ -5,7 +5,15 @@ import { albums } from "../data/albums";
 function AlbumList() {
   return (
     <section className="albums">
-      <Album
+        { albums.map((album) => 
+            <Album
+              name={album.name}
+              image={album.image}
+              genre={album.genre}
+            />
+        ) }
+  
+      {/* <Album
         name="Classic Tuna Cans Being Opened"
         image="https://target.scene7.com/is/image/Target/GUEST_360eeed2-1747-4b15-8394-a22c7cd12230?wid=488&hei=488&fmt=pjpeg"
         genre="Cats"
@@ -24,7 +32,7 @@ function AlbumList() {
         name="Aloha K.K."
         image="https://vignette.wikia.nocookie.net/animalcrossing/images/5/5d/NH-Album_Cover-Aloha_K.K..png/revision/latest?cb=20200502231742"
         genre="Dogs"
-      />
+      /> */}
     </section>
   );
 }
